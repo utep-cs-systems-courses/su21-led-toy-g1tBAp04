@@ -38,10 +38,10 @@ void blink_button_advance(char blink_count) //functions normal light
     buzzer_set_period(0);
     static char state =0;
     switch (state){
-    case 0: buzzer_ser_period(0); red_on = 0; green_on =1; state++; break;
-    case 1: buzzer_ser_period(0); red_on = 1; green_on =0; state++; break;
-    case 2: buzzer_ser_period(0); red_on = 0; green_on =1; state++; break;
-    case 3: buzzer_ser_period(0); red_on = 1; green_on =1; state = 0; break;
+    case 0: buzzer_set_period(3795); red_on = 0; green_on =1; state++; break;
+    case 1: buzzer_set_period(4264); red_on = 1; green_on =0; state++; break;
+    case 2: buzzer_set_period(4264); red_on = 0; green_on =1; state++; break;
+    case 3: buzzer_set_period(5063); red_on = 1; green_on =1; state = 0; break;
     default: state = 0;
     }
     led_changed=1;
