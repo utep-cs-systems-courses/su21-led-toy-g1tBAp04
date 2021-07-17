@@ -10,7 +10,7 @@ __interrupt_vec(WDT_VECTOR) WDT(){ //(250 int = 1scec)
   static char buzz_count = 0;
   
   if (++blink_count == interruptTime) {
-    blunk_button_advance(blink_count);
+    blink_button_advance(blink_count);
     blink_count=0;
   }
   

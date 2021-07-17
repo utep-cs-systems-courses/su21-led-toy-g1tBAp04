@@ -1,0 +1,41 @@
+	#include <msp430.h>
+	#include "led.h"
+
+	.arch msp430g2553
+	.p2align 1,0
+	.text
+	.extern P1DIR
+	.extern P1OUT
+	.extern LEDS
+	.extern LED_RED
+	.extern LED_GREEN
+	.global led_changed
+
+	.data
+
+	//variable
+
+red_on:	
+	.byte 0
+
+green_on:
+	.byte 0
+	
+led_changed:
+	.byte 0
+	
+ledFlags:
+	.byte 0
+
+redVal:
+	.byte 0
+	.byte LED_RED
+
+greenVal:
+	.byte 0
+	.byte LED_GREEN
+
+	
+	//function
+
+	

@@ -8,8 +8,7 @@ char switch_state_down_3;
 char switch_state_down_4;
 
 
-static char 
-switch_update_interrupt_sense()
+static char switch_update_interrupt_sense()
 {
   char p2val = P2IN;
   /* update switch interrupt to detect changes from current buttons */
